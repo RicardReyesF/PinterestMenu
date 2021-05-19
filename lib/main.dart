@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       routes: 
       
         {
-         "home": (BuildContext context ) => MenuPage(),
+         "Home": (BuildContext context ) => MenuPage(),
         }
        
       
