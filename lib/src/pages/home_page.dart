@@ -12,12 +12,36 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      body: PinterestMenuWidget() 
+      body: Stack(
+        children: [
+        PinterestGrid(),
+        _MenuScroll(),  
+      ],
+    ) 
+      //PinterestMenuWidget() 
       //PinterestGrid()
     );
   }
   
+}
+
+class _MenuScroll extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    final widthPagina = MediaQuery.of(context).size.width;
+    return Positioned(
+      bottom: 30,
+      child: Container(
+        width: widthPagina,
+        child: Align(
+          child: PinterestMenuWidget()
+        ),
+      )
+    );
+  }
 }
 
 
